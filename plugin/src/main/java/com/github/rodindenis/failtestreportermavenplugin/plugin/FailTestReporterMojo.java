@@ -1,4 +1,4 @@
-package com.github.rodindenis.failtestreportermavenplugin;
+package com.github.rodindenis.failtestreportermavenplugin.plugin;
 
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
@@ -13,7 +13,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-@Mojo(name = "fail-test-reporter", defaultPhase = LifecyclePhase.TEST)
+@Mojo(name = "fail-test-reporter", defaultPhase = LifecyclePhase.POST_INTEGRATION_TEST)
 public class FailTestReporterMojo extends AbstractMojo {
 
     @Parameter(property = "reports")
@@ -29,7 +29,7 @@ public class FailTestReporterMojo extends AbstractMojo {
         log.info("Is file exists " + Files.exists(path));
 
         try {
-            Files.lines(path).forEach(line -> log.info(line));
+            Files.lines(path).forEach(log::info);
         } catch (IOException e) {
             throw new MojoExecutionException(String.format("Can't read report file %s", report), e);
         }
