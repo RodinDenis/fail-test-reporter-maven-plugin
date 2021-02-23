@@ -3,15 +3,15 @@ package com.github.rodindenis.failtestreportermavenplugin.plugin;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugin.MojoFailureException;
-import org.apache.maven.plugin.logging.Log;
 import org.apache.maven.plugins.annotations.LifecyclePhase;
 import org.apache.maven.plugins.annotations.Mojo;
 import org.apache.maven.plugins.annotations.Parameter;
+import org.github.rodindenis.failtestreportermavenplugin.parser.JSONCucumberReportParser;
+import org.github.rodindenis.failtestreportermavenplugin.parser.features.JSONFeature;
 
+import java.io.File;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import java.util.List;
 
 @Mojo(name = "fail-test-reporter", defaultPhase = LifecyclePhase.POST_INTEGRATION_TEST)
 public class FailTestReporterMojo extends AbstractMojo {
@@ -21,17 +21,14 @@ public class FailTestReporterMojo extends AbstractMojo {
 
     @Override
     public void execute() throws MojoExecutionException, MojoFailureException {
-        Log log = getLog();
+        getLog().debug(String.format("reports parameter is %s", report));
 
-        Path path = Paths.get(report);
-
-        log.info(String.format("reports parameter is %s", report));
-        log.info("Is file exists " + Files.exists(path));
+        JSONCucumberReportParser parser = new JSONCucumberReportParser();
 
         try {
-            Files.lines(path).forEach(log::info);
+            List<JSONFeature> features = parser.parse(new File(report));
         } catch (IOException e) {
-            throw new MojoExecutionException(String.format("Can't read report file %s", report), e);
+            throw new MojoFailureException(String.format("Can't read report file %s", report), e);
         }
     }
 }
