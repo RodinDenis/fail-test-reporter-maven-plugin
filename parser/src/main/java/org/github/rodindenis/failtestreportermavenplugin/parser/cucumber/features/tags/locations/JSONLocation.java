@@ -1,4 +1,4 @@
-package org.github.rodindenis.failtestreportermavenplugin.parser.features.tags.locations;
+package org.github.rodindenis.failtestreportermavenplugin.parser.cucumber.features.tags.locations;
 
 import lombok.Data;
 

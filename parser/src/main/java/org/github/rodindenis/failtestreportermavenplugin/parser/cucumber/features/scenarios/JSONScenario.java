@@ -1,9 +1,9 @@
-package org.github.rodindenis.failtestreportermavenplugin.parser.features.scenarios;
+package org.github.rodindenis.failtestreportermavenplugin.parser.cucumber.features.scenarios;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
-import org.github.rodindenis.failtestreportermavenplugin.parser.features.scenarios.steps.JSONStep;
-import org.github.rodindenis.failtestreportermavenplugin.parser.features.scenarios.steps.tags.JSONStapTag;
+import org.github.rodindenis.failtestreportermavenplugin.parser.cucumber.features.scenarios.steps.JSONStep;
+import org.github.rodindenis.failtestreportermavenplugin.parser.cucumber.features.scenarios.steps.tags.JSONStapTag;
 
 import java.util.List;
 

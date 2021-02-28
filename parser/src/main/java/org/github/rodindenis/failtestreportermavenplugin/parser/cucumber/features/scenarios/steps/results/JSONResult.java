@@ -1,4 +1,4 @@
-package org.github.rodindenis.failtestreportermavenplugin.parser.features.scenarios.steps.results;
+package org.github.rodindenis.failtestreportermavenplugin.parser.cucumber.features.scenarios.steps.results;
 
 import lombok.Data;
 

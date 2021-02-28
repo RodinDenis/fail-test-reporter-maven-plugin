@@ -1,8 +1,8 @@
-package org.github.rodindenis.failtestreportermavenplugin.parser.features;
+package org.github.rodindenis.failtestreportermavenplugin.parser.cucumber.features;
 
 import lombok.Data;
-import org.github.rodindenis.failtestreportermavenplugin.parser.features.scenarios.JSONScenario;
-import org.github.rodindenis.failtestreportermavenplugin.parser.features.tags.JSONFeatureTag;
+import org.github.rodindenis.failtestreportermavenplugin.parser.cucumber.features.scenarios.JSONScenario;
+import org.github.rodindenis.failtestreportermavenplugin.parser.cucumber.features.tags.JSONFeatureTag;
 
 import java.util.List;
 

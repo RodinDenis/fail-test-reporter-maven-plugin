@@ -6,7 +6,7 @@ import org.apache.maven.plugin.MojoFailureException;
 import org.apache.maven.plugins.annotations.LifecyclePhase;
 import org.apache.maven.plugins.annotations.Mojo;
 import org.apache.maven.plugins.annotations.Parameter;
-import org.github.rodindenis.failtestreportermavenplugin.parser.JSONCucumberReportParser;
+import org.github.rodindenis.failtestreportermavenplugin.parser.cucumber.JSONCucumberReportParser;
 
 import java.io.File;
 import java.io.IOException;

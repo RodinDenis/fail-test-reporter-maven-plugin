@@ -1,10 +1,10 @@
-package org.github.rodindenis.failtestreportermavenplugin.parser;
+package org.github.rodindenis.failtestreportermavenplugin.parser.cucumber;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.github.rodindenis.failtestreportermavenplugin.parser.features.JSONFeature;
-import org.github.rodindenis.failtestreportermavenplugin.parser.features.scenarios.JSONScenario;
-import org.github.rodindenis.failtestreportermavenplugin.parser.features.scenarios.steps.JSONStep;
+import org.github.rodindenis.failtestreportermavenplugin.parser.cucumber.features.JSONFeature;
+import org.github.rodindenis.failtestreportermavenplugin.parser.cucumber.features.scenarios.JSONScenario;
+import org.github.rodindenis.failtestreportermavenplugin.parser.cucumber.features.scenarios.steps.JSONStep;
 
 import java.io.File;
 import java.io.IOException;
