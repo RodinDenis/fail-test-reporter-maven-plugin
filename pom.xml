@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.rodindenis</groupId>
+    <groupId>com.github.rodindenis.fail-test-reporter-maven-plugin</groupId>
     <artifactId>fail-test-reporter</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
